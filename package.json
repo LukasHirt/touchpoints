@@ -3,14 +3,17 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "nuxt-ts",
+    "dev": "npm-run-all --parallel nuxt-dev gen-docs-dev",
+    "nuxt-dev": "nuxt-ts",
     "build": "nuxt-ts build",
     "start": "nuxt-ts start",
     "generate": "nuxt-ts generate",
     "lint:js": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "lint:style": "stylelint **/*.{vue,css} --ignore-path .gitignore",
     "lint": "yarn lint:js && yarn lint:style",
-    "test": "jest"
+    "test": "jest",
+    "gen-docs": "vue-docgen",
+    "gen-docs-dev": "vue-docgen -w"
   },
   "dependencies": {
     "@nuxt/content": "^1.9.0",
@@ -35,11 +38,15 @@
     "eslint-plugin-nuxt": "^1.0.0",
     "eslint-plugin-prettier": "^3.1.4",
     "jest": "^26.5.0",
+    "npm-run-all": "^4.1.5",
     "prettier": "^2.1.2",
     "stylelint": "^13.7.2",
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-config-standard": "^20.0.0",
     "ts-jest": "^26.4.1",
-    "vue-jest": "^3.0.4"
+    "vue-docgen-cli": "^4.34.1",
+    "vue-jest": "^3.0.4",
+    "vue-property-decorator": "^9.1.2",
+    "vuex-module-decorators": "^1.0.1"
   }
 }

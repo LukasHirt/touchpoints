@@ -1,7 +1,7 @@
 <template>
   <div class="container">
+    <Sidebar />
     <div>
-      <Logo />
       <h1 class="title">vue-design-system</h1>
       <div class="links">
         <a
